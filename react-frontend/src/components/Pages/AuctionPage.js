@@ -1,5 +1,5 @@
-import Auction from "./Auction";
-import ProductCard from "./ProductCard";
+import Auction from "../Auction";
+import ProductCard from "../ProductCard";
 
 export default function AuctionPage(){
 

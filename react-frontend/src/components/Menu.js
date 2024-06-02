@@ -8,7 +8,9 @@ export default function Menu(){
             <ButtonMenu title={"Productos"}></ButtonMenu>
             <ButtonMenu title={"Favoritos"}></ButtonMenu>
             <ButtonMenu title={"Vendedores"}></ButtonMenu>
-            <ButtonMenu title={"Login"}></ButtonMenu>
+            <ButtonMenu title={"Mis Productos"}></ButtonMenu>
+            <ButtonMenu title={"Acceso"}></ButtonMenu>
+            <ButtonMenu title={"Registro"}></ButtonMenu>
 
         </div>
     )
