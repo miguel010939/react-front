@@ -1,4 +1,4 @@
-import '../logo.svg'
+
 export default function ProductCard({imgSrc, name, description}){
 
     return(

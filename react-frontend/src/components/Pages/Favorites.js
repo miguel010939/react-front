@@ -1,4 +1,4 @@
-import ProductsGridView from "../ProductsGridView";
+import ProductsGridView from "../Subcomponents/ProductsGridView";
 
 export default function Favorites(){
 

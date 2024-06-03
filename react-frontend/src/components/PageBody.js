@@ -1,13 +1,13 @@
-import ProductsGridView from "./ProductsGridView";
-import UserList from "./UserList";
+import ProductsGridView from "./Subcomponents/ProductsGridView";
+import UserList from "./Subcomponents/UserList";
 
-export default function PageBody(){
+export default function PageBody({children}){
     return(
         <div>
             <h1>header 1</h1>
             <h2>header 2</h2>
-            <div className="flex items-center justify-center">
-                <UserList></UserList>
+            <div className="flex items-center justify-center mx-20 bg-amber-200">
+                {children}
             </div>
 
         </div>

@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter } from 'react-router-dom';
+import PageBody from './components/PageBody';
+import HomePage from './components/Pages/HomePage';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
