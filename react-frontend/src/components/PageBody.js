@@ -1,6 +1,3 @@
-import ProductsGridView from "./Subcomponents/ProductsGridView";
-import UserList from "./Subcomponents/UserList";
-
 export default function PageBody({children}){
     return(
         <div>

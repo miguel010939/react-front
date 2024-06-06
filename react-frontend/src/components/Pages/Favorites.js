@@ -1,4 +1,4 @@
-import ProductsGridView from "../Subcomponents/ProductsGridView";
+import FavoritesFetcher from "../Fetchers/FavoritesFetcher";
 
 export default function Favorites(){
 
@@ -6,7 +6,7 @@ export default function Favorites(){
         <div>
             <h1>Tus Productos Favoritos</h1>
 
-            <ProductsGridView></ProductsGridView>
+            <FavoritesFetcher token={"64e74791870e2fda58fddaac4df93328"} limit={20} offset={0}></FavoritesFetcher>
         </div>
     )
 }
