@@ -11,6 +11,8 @@ import UserPage from './components/Pages/UserPage';
 import SingleProductPage from './components/Pages/SingleProductPage';
 import ProductsPage from './components/Pages/ProductsPage';
 import { currentUserid } from './Consts';
+import ProductAuctionPage from './components/Pages/ProductAuctionPage';
+import AuctionsPage from './components/Pages/AuctionsPage';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Page><HomePage/></Page>
+  },
+  {
+    path: "/auctions",
+    element: <Page><AuctionsPage/></Page>
+  },
+  {
+    path: "/auctions/product/:id",
+    element: <Page><ProductAuctionPage/></Page>
   },
   {
     path: "/products/new",
