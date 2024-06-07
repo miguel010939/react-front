@@ -29,7 +29,7 @@ export default function SingleProductPage(){
 
     if (loading) return <Loading/>;
     if (error) return <Error/>;
-
+// TODO use filter() to filter out the product of the current page
     return(
         <div className="flex flex-col">
             <ProductBanner imgSrc={product.imageUrl} 
@@ -39,7 +39,7 @@ export default function SingleProductPage(){
             <UserBanner id={product.userId} username={"Giacomo"}/>
 
             <h1>Otros productos del mismo vendedor</h1>
-
+            
             <ProductFetcher userId={product.userId} limit={3} />
 
         </div>
