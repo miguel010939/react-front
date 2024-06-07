@@ -1,2 +1,3 @@
-export const token = "136bb2cb686c62b61bc6294034e56352"
-export const backend = "http://localhost:8090/"
+export const token = "3d0612d604e82a8434add1ebf3628d31";
+export const backend = "http://localhost:8090/";
+export const currentUserid = 1;

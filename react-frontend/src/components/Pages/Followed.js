@@ -1,7 +1,7 @@
 import { backend, token } from "../../Consts";
 import UserList from "../Subcomponents/UserList";
-import Error from "./Error";
-import Loading from "./Loading";
+import Error from "../ErrorsAndLoading/Error";
+import Loading from "../ErrorsAndLoading/Loading";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 

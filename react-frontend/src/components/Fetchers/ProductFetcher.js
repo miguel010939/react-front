@@ -2,10 +2,10 @@ import ProductsGridView from "../Subcomponents/ProductsGridView";
 import ProductCard from "../Subcomponents/ProductCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Loading from "../Pages/Loading";
-import Error from "../Pages/Error";
+import Loading from "../ErrorsAndLoading/Loading";
+import Error from "../ErrorsAndLoading/Error";
 import { backend } from "../../Consts";
-export default function ProductFetcher({userId, limit, offset}){
+export default function ProductFetcher({userId, limit, offset, token}){
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -41,7 +41,11 @@ export default function ProductFetcher({userId, limit, offset}){
     }
 
     useEffect(() => {
-    axios.get(backend + 'products' + query())
+    axios.get(backend + 'products' + query(),{
+        headers:{
+            "sessionid": token
+        }
+    })
       .then((response) => {
         setData(response.data);
         setLoading(false);

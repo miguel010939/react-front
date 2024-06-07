@@ -2,8 +2,8 @@ import ProductsGridView from "../Subcomponents/ProductsGridView";
 import ProductCard from "../Subcomponents/ProductCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Loading from "../Pages/Loading";
-import Error from "../Pages/Error";
+import Loading from "../ErrorsAndLoading/Loading";
+import Error from "../ErrorsAndLoading/Error";
 import { backend } from "../../Consts";
 export default function FavoritesFetcher({token, limit, offset}){
 

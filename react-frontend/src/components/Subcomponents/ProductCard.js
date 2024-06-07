@@ -5,7 +5,8 @@ export default function ProductCard({id, imgSrc, name, description, userId, show
     return(
         <Link to={linkToProduct}>
         <div className=" bg-slate-700">
-            <img src={"https://en.opensuse.org/images/f/f2/Button-laptop-colour.png"} alt="XXXX" className=""></img> 
+            <img src={imgSrc} alt="XXXX" 
+            className="w-52 h-52"/>
             <p>{name}</p>
             <p>{description}</p>
             <p>{imgSrc}</p>

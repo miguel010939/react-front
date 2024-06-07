@@ -1,6 +1,7 @@
 import './index.css';
 import LogInForm from './components/Forms/LogInForm'
 import SignUpForm from './components/Forms/SignUpForm'
+import ProductForm from './components/Forms/ProductForm';
 import Followed from './components/Pages/Followed'
 import HomePage from './components/Pages/HomePage';
 import Favorites from './components/Pages/Favorites';
@@ -8,6 +9,8 @@ import { BrowserRouter as Router, RouterProvider, createBrowserRouter, Navigate 
 import Page from './components/Page';
 import UserPage from './components/Pages/UserPage';
 import SingleProductPage from './components/Pages/SingleProductPage';
+import ProductsPage from './components/Pages/ProductsPage';
+import { currentUserid } from './Consts';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +22,12 @@ const router = createBrowserRouter([
     element: <Page><HomePage/></Page>
   },
   {
+    path: "/products/new",
+    element: <Page><ProductForm/></Page>
+  },
+  {
     path: "/products",
-    element: <Page><Favorites/></Page>
+    element: <Page><ProductsPage/></Page>
   },
   {
     path: "/favorites",
@@ -32,7 +39,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/myproducts",
-    element: <Page><Favorites/></Page>
+    element: <Page><ProductsPage user={currentUserid}/></Page>
   },
   {
     path: "/login",
