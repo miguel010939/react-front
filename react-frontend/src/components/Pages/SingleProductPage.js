@@ -32,7 +32,7 @@ export default function SingleProductPage(){
 
     return(
         <div className="flex flex-col">
-            <ProductBanner imgSrc={"https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo-ubuntu_cof-orange-hex.svg"} 
+            <ProductBanner imgSrc={product.imageUrl} 
             name={product.name} description={product.description}
             id={product.id}/>
 

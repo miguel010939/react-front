@@ -1,12 +1,13 @@
 import { backend, token } from "../../Consts";
 import UserList from "../Subcomponents/UserList";
 import Error from "../ErrorsAndLoading/Error";
+import NoUsersError from "../ErrorsAndLoading/NoUsersError";
 import Loading from "../ErrorsAndLoading/Loading";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
 export default function Followed() {
-    
+    // TODO reload the page when user unfollows someone
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -30,7 +31,17 @@ export default function Followed() {
     }, []);
 
     if (loading) return <Loading/>;
-    if (error) return <Error/>;
+    if (error){
+      switch(error.response.status){
+          case 401:
+              alert("Debes iniciar sesión");
+              break;
+          case 404:
+              return <NoUsersError/>
+          default:
+              return <Error/>
+      }
+  }
     
     return(
         <div>

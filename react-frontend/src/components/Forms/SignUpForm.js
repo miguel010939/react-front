@@ -17,7 +17,7 @@ export default function SignUpForm(){
                 {"username": username, "email": email, "password": password}
             );
             const token = response.headers["sessionid"];
-            console.log(response.headers);
+            console.log(token);
             navigate("/products"); // new user is driven to /products, so he/she buys sthing
         } catch(err){
             console.error(err);

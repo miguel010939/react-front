@@ -5,6 +5,7 @@ import axios from "axios";
 import Loading from "../ErrorsAndLoading/Loading";
 import Error from "../ErrorsAndLoading/Error";
 import { backend } from "../../Consts";
+import NoProductsError from "../ErrorsAndLoading/NoProductsError";
 export default function FavoritesFetcher({token, limit, offset}){
 
     const [data, setData] = useState([]);
@@ -37,7 +38,6 @@ export default function FavoritesFetcher({token, limit, offset}){
       .then((response) => {
         setData(response.data);
         setLoading(false);
-        console.log(response.data)
       })
       .catch((error) => {
         setError(error);
@@ -47,7 +47,17 @@ export default function FavoritesFetcher({token, limit, offset}){
     }, [token, limit, offset]);
 
     if (loading) return <Loading/>;
-    if (error) return <Error/>;
+    if (error){
+        switch(error.response.status){
+            case 401:
+                alert("Debes iniciar sesión");
+                break;
+            case 404:
+                return <NoProductsError/>
+            default:
+                return <Error/>
+        }
+    }
 
     return(
         <div className="">
