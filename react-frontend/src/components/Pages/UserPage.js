@@ -1,13 +1,16 @@
+import { useParams } from "react-router-dom"
 import ProductFetcher from "../Fetchers/ProductFetcher"
 import UserBanner from "../Subcomponents/UserBanner"
-export default function UserPage({userId, username}){
+export default function UserPage(){
+    const {id} = useParams();
+    const {username} = useParams();
 
     return(
-        <>
-        <UserBanner id={userId} username={username}></UserBanner>
+        <div className="flex flex-col">
+        <UserBanner id={id} username={username}></UserBanner>
         <h1>Algunos de sus productos</h1>
-        <ProductFetcher userId={userId} limit={4}></ProductFetcher>
-        </>
+        <ProductFetcher userId={id} limit={3}></ProductFetcher>
+        </div>
     )
 
 }

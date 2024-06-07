@@ -52,7 +52,7 @@ export default function FavoritesFetcher({token, limit, offset}){
     return(
         <div className="">
            <ProductsGridView >
-            {data.map((item)=><ProductCard imgSrc={item.imageUrl} name={item.name} 
+            {data.map((item)=><ProductCard id={item.id} imgSrc={item.imageUrl} name={item.name} 
             description={item.description} userId={item.userId}></ProductCard>)}
             </ProductsGridView>
         </div>
