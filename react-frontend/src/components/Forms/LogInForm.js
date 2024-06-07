@@ -23,7 +23,7 @@ export default function LogInForm(){
     }
 
     return(
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-slate-400 my-10 px-10 py-5 rounded-xl">
             <h1 className="mb-10">Acceso</h1>
             <form onSubmit={login} className="flex flex-col">
                 <label>Nombre de usuario</label>

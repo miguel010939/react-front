@@ -30,7 +30,7 @@ export default function ProductForm(){
     }
 
     return(
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-slate-400 my-10 px-10 py-5 rounded-xl">
             <h1 className="mb-10">Nuevo Producto</h1>
             <form onSubmit={submit} className="flex flex-col">
                 <label>Nombre del producto</label>

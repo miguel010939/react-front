@@ -55,16 +55,15 @@ export default function ProductCard({id, imgSrc, name, description, userId, show
 
     return(
         <Link to={linkToProduct}>
-        <div className=" bg-slate-700">
+        <div className=" bg-slate-400 hover:bg-slate-100 px-6 py-6 rounded-lg">
             <img src={imgSrc} alt="XXXX" 
             className="w-52 h-52"/>
-            <p>{name}</p>
-            <p>{description}</p>
-            <p>{imgSrc}</p>
-            <p>{userId}</p>
-            <div className="flex flex-row">
-                {showFavoriteButton === 1 && <button onClick={fav}>Marcar como favorito</button>}
-                {showFavoriteButton === -1 && <button onClick={unfav}>Quitar de favoritos</button>}
+            <p className="font-bold text-lg my-3">{name}</p>
+            <p className="italic">{description}</p>
+            
+            <div className="flex flex-row my-3">
+                {showFavoriteButton === 1 && <button className="text-white font-bold bg-black p-2" onClick={fav}>Marcar como favorito</button>}
+                {showFavoriteButton === -1 && <button className="text-white font-bold bg-black p-2" onClick={unfav}>Quitar de favoritos</button>}
             </div>
         </div>
         </Link>

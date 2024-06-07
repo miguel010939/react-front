@@ -25,7 +25,7 @@ export default function SignUpForm(){
     }
 
     return(
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-slate-400 my-10 px-10 py-5 rounded-xl">
             <h1 className="mb-10">Registro</h1>
             <form onSubmit={signup} className="flex flex-col">
                 <label>Nombre de usuario</label>

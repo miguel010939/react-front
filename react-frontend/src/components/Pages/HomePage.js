@@ -1,8 +1,8 @@
 export default function HomePage(){
     return(
-        <div>
-            <div>
-            <h1>Compra o Subasta lo que quieras</h1>
+        <div className="flex flex-col gap-10 text-lg justify-center">
+            <div className="flex flex-col gap-5">
+            <h1 className="font-bold text-2xl">Compra o Subasta lo que quieras</h1>
             <p>Únete a las decenas de usuarios que ya confían en nosotros
                y subasta tus pertenencias legalmente adquiridas en nuestro
                portal 
@@ -12,21 +12,18 @@ export default function HomePage(){
             </p>
             </div>
 
-            <div>
-                <h1>¿Quiénes somos?</h1>
+            <div className="flex flex-col gap-5">
+                <h1 className="font-bold text-2xl">¿Quiénes somos?</h1>
                 <p>Nosotros somos un humilde pero ambicioso grupo de ideas absurdas
                      que se han asociado en una misma cabeza para montar una 
                      empresa ficticia
                 </p>
             </div>
-            <div>
-                <h1>¿Cuál es nuestra misión?</h1>
+            <div className="flex flex-col gap-5">
+                <h1 className="font-bold text-2xl">¿Cuál es nuestra misión?</h1>
                 <p>Nuestro porqué es tu cómo. Es nuestro compromiso servir a nuestros 
                     usuarios de la mejor forma que queramos. Además, nuestro propósito 
-                    inquebrantable con la protección del final ambiente y otras consecuencias
-                    sociales muy populares, nos mueven a donar el 69% de nuestros beneficios 
-                    en favor de ONGs dedicadas a la conservación del folklore tradicional 
-                    lapón
+                    inquebrantable con la protección del medio ambiente
                 </p>
                 <p>También queremos aprobar el TFC</p>
             </div>

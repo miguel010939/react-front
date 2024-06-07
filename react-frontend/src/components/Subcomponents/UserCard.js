@@ -26,7 +26,7 @@ export default function UserCard({id, username}){
     }
 
     return(
-        <div className="flex flex-row gap-4 hover:bg-red-500 bg-orange-300">
+        <div className="flex flex-row gap-4 hover:bg-slate-300 rounded-md">
 
             <img className="w-36 h-36" src={condotiero} 
             alt="YYYY"></img>

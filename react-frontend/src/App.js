@@ -71,7 +71,7 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <div className='font-mono'>
+    <div className='arial'>
       <RouterProvider router={router}/>
     </div>
   );
