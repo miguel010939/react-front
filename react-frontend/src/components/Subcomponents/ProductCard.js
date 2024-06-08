@@ -55,7 +55,7 @@ export default function ProductCard({id, imgSrc, name, description, userId, show
 
     return(
         <Link to={linkToProduct}>
-        <div className=" bg-slate-400 hover:bg-slate-100 px-6 py-6 rounded-lg">
+        <div className=" bg-slate-400 hover:bg-slate-100 px-6 py-6 rounded-lg hover:border-2 hover:border-black hover:p-5">
             <img src={imgSrc} alt="XXXX" 
             className="w-52 h-52"/>
             <p className="font-bold text-lg my-3">{name}</p>

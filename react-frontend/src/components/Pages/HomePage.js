@@ -1,6 +1,6 @@
 export default function HomePage(){
     return(
-        <div className="flex flex-col gap-10 text-lg justify-center">
+        <div className="flex flex-col gap-10 text-lg justify-center mt-16">
             <div className="flex flex-col gap-5">
             <h1 className="font-bold text-2xl">Compra o Subasta lo que quieras</h1>
             <p>Únete a las decenas de usuarios que ya confían en nosotros

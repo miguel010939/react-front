@@ -53,18 +53,19 @@ export default function UserBanner({id, username, showFollowButton = 1}){
 
     return(
         <Link to={"/users/"+id+"/username/"+username}>
-        <div className="flex flex-row gap-4 hover:bg-red-500 bg-teal-500">
+        <div className="flex flex-row gap-4 p-6 rounded-xl 
+        hover:border-2 hover:p-5 hover:bg-slate-100 bg-teal-100 hover:border-green-700">
 
-            <img className="w-40 h-40" src={condotiero} 
+            <img className="w-40 h-40 mr-10" src={condotiero} 
             alt="YYYY"></img>
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-3">
                 <p>{username}</p>
                 <p>Soy un condotiero de Rávena muy aficionado a los juegos de azar. Odio a muerte a los Capuletos. 
                     Tampoco me cae muy bien el Papa.
                 </p>
-                <div className="flex flex-row justify-end">
-                    {showFollowButton === 1 && <button onClick={foll}>Seguir</button>}
-                    {showFollowButton === -1 && <button onClick={unfoll}>Dejar de seguir</button>}
+                <div className="flex flex-row justify-end mt-8 mr-2">
+                    {showFollowButton === 1 && <button className="text-white font-bold bg-black p-2" onClick={foll}>Seguir</button>}
+                    {showFollowButton === -1 && <button className="text-white font-bold bg-black p-2" onClick={unfoll}>Dejar de seguir</button>}
                 </div>
             </div>
         </div>

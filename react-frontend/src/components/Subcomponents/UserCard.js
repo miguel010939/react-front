@@ -26,14 +26,17 @@ export default function UserCard({id, username}){
     }
 
     return(
-        <div className="flex flex-row gap-4 hover:bg-slate-300 rounded-md">
-
-            <img className="w-36 h-36" src={condotiero} 
-            alt="YYYY"></img>
-            <p>{username}</p>
-            <div className="flex flex-row">
-                <button onClick={unfoll}>Dejar de seguir</button>
-                <Link to={"/users/"+id+"/username/"+username}>Productos</Link>
+        <div className="flex flex-row w-fill
+        bg-slate-400 hover:bg-slate-100 px-6 py-6 rounded-lg hover:border-2 hover:border-black hover:p-5">
+            <div className="mr-32">
+                <img className="w-36 h-36" src={condotiero} 
+                alt="YYYY"></img>
+                <p className="text-center mt-4 font-semibold italic">{username}</p>
+            </div>
+            
+            <div className="flex flex-col mr-24 justify-evenly">
+                <button className=" text-white font-bold bg-black p-2 rounded-xl" onClick={unfoll}>Dejar de seguir</button>
+                <Link className=" text-white font-bold bg-black p-2 rounded-xl" to={"/users/"+id+"/username/"+username}>Productos</Link>
             </div>
             
         </div>

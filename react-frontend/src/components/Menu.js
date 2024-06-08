@@ -31,13 +31,15 @@ export default function Menu(){
             <ButtonMenu title={"Favoritos"} path={"/favorites"}></ButtonMenu>
             <ButtonMenu title={"Vendedores"} path={"/sellers"}></ButtonMenu>
             <ButtonMenu title={"Mis Productos"} path={"/myproducts"}></ButtonMenu>
-            <div className="flex flex-col text-2xl ">
-                <Link className="hover:font-bold" to={"/login"}>Acceso</Link>
-                <Link className="hover:font-bold" to={"/signup"}>Registro</Link>
+            <div className="flex flex-row text-white gap-6 -mr-4">
+                <div className="flex flex-col gap-2 -mt-4 text-2xl">
+                    <Link className="hover:font-bold" to={"/login"}>Acceso</Link>
+                    <Link className="hover:font-bold" to={"/signup"}>Registro</Link>
+                </div>
+                <button className="text-lg hover:underline "
+                onClick={logout}>Cerrar sesión</button>
             </div>
-            <button className="text-lg hover:underline "
-            onClick={logout}>Cerrar sesión</button>
-
+        
         </div>
     )
 }

@@ -63,7 +63,7 @@ export default function FavoritesFetcher({token, limit, offset}){
         <div className="">
            <ProductsGridView >
             {data.map((item)=><ProductCard id={item.id} imgSrc={item.imageUrl} name={item.name} 
-            description={item.description} userId={item.userId}></ProductCard>)}
+            description={item.description} userId={item.userId} showFavoriteButton={-1}></ProductCard>)}
             </ProductsGridView>
         </div>
     )

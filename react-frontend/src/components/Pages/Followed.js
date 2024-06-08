@@ -45,7 +45,7 @@ export default function Followed() {
     
     return(
         <div>
-            <h1>Usuarios a los que sigues</h1>
+            <h1 className="mt-10 mb-8 font-bold text-center text-2xl">Usuarios a los que sigues</h1>
 
             <UserList data={data} />
         </div>

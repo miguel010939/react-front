@@ -17,14 +17,13 @@ export default function AuctionCard({productId}){
 
 
     return(
-        <div className=" bg-slate-700">
+        <div className="flex flex-col gap-4 bg-slate-400 hover:bg-slate-100 px-6 py-6 rounded-lg hover:border-2 hover:border-black hover:p-5">
             <img src={product.imageUrl} alt="XXXX" 
             className="w-52 h-52"/>
-            <p>{product.name}</p>
-            <p>{product.description}</p>
-            <p>{product.userId}</p>
+            <p className="font-bold text-xl">{product.name}</p>
+            <p className="italic ms-3">{product.description}</p>
             <Link to={"/auctions/product/"+productId}
-            className="bg-red-800 text-white font-bold">SUBASTA</Link>
+            className="bg-red-800 text-white text-xl font-bold px-4 py-3 w-40 rounded-full">SUBASTA</Link>
 
         </div>
     )

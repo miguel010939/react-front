@@ -5,7 +5,7 @@ export default function Page({children}){
     return(
         <>
         <Menu/>
-        <PageBody>{children}</PageBody>
+        <PageBody className="mt-10">{children}</PageBody>
         </>
     )
 }

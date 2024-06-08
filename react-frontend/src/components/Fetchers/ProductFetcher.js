@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../ErrorsAndLoading/Loading";
 import Error from "../ErrorsAndLoading/Error";
-import { backend } from "../../Consts";
+import { backend, currentUserid } from "../../Consts";
 export default function ProductFetcher({userId, limit, offset, token}){
 
     const [data, setData] = useState([]);
@@ -64,7 +64,8 @@ export default function ProductFetcher({userId, limit, offset, token}){
     return(
         <div className="">
            <ProductsGridView >
-            {data.map((item)=><ProductCard id={item.id} imgSrc={item.imageUrl} name={item.name} 
+            {data.map((item)=><ProductCard showFavoriteButton={userId===currentUserid?0:1} 
+            id={item.id} imgSrc={item.imageUrl} name={item.name} 
             description={item.description} userId={item.userId}></ProductCard>)}
             </ProductsGridView>
         </div>

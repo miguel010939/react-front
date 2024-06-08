@@ -31,14 +31,14 @@ export default function SingleProductPage(){
     if (error) return <Error/>;
 // TODO use filter() to filter out the product of the current page
     return(
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-8 mt-10">
             <ProductBanner imgSrc={product.imageUrl} 
             name={product.name} description={product.description}
             id={product.id}/>
 
             <UserBanner id={product.userId} username={"Giacomo"}/>
 
-            <h1>Otros productos del mismo vendedor</h1>
+            <h1  className="text-center font-bold text-2xl">Otros productos del mismo vendedor</h1>
             
             <ProductFetcher userId={product.userId} limit={3} />
 

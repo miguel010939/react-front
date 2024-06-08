@@ -53,15 +53,16 @@ export default function ProductBanner({id, imgSrc, name, description, showFavori
 
 
     return(
-        <div className="flex flex-row gap-4 hover:bg-red-500 bg-teal-500">
+        <div className="flex flex-row gap-4 p-6 rounded-xl 
+        hover:border-2 hover:p-5 hover:bg-slate-100 bg-teal-100 hover:border-green-700">
 
             <img className="w-40 h-40" src={imgSrc}/>
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-3">
                 <p>{name}</p>
                 <p>{description}</p>
-                <div className="flex flex-row">
-                    {showFavoriteButton === 1 && <button onClick={fav}>Marcar como favorito</button>}
-                    {showFavoriteButton === -1 && <button onClick={unfav}>Quitar de favoritos</button>}
+                <div className="flex flex-row justify-end mt-8">
+                    {showFavoriteButton === 1 && <button className="text-white font-bold bg-black p-2" onClick={fav}>Marcar como favorito</button>}
+                    {showFavoriteButton === -1 && <button className="text-white font-bold bg-black p-2" onClick={unfav}>Quitar de favoritos</button>}
                 </div>
             </div>
         </div>

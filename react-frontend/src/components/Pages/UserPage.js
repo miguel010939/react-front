@@ -6,9 +6,9 @@ export default function UserPage(){
     const {username} = useParams();
 
     return(
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-8 mt-10">
         <UserBanner id={id} username={username}></UserBanner>
-        <h1>Algunos de sus productos</h1>
+        <h1 className="text-center font-bold text-2xl">Algunos de sus productos</h1>
         <ProductFetcher userId={id} limit={3}></ProductFetcher>
         </div>
     )

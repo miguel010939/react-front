@@ -30,7 +30,6 @@ export default function AuctionsPage(){
     if (data == null) return <NoAuctionsError/>
     // I know this is doing N+1 requests and is terribly inefficient, but im short on time
     return(
-
         <ProductsGridView>
             {data.map((id)=><AuctionCard productId={id}></AuctionCard>)}
         </ProductsGridView>
